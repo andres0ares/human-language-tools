@@ -1,0 +1,39 @@
+{
+  "name": "human-language-tools",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run dictionary && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "dictionary": "node scripts/generate-dictionary.mjs",
+    "postinstall": "node scripts/generate-dictionary.mjs",
+    "smoke": "npx --yes tsx scripts/smoke-tokenize.ts"
+  },
+  "dependencies": {
+    "an-array-of-french-words": "^2.0.0",
+    "jszip": "^3.10.1",
+    "mammoth": "^1.11.0",
+    "next": "16.4.4",
+    "pdfjs-dist": "4.10.38",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "lightningcss-win32-x64-msvc": "^1.32.0"
+  }
+}
